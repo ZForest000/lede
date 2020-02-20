@@ -5,6 +5,7 @@
 # 
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
+# Manual trigger 1
 
 name: Merge-upstream
 
