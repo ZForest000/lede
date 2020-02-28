@@ -187,22 +187,31 @@ jobs:
           CONFIG_PACKAGE_htop=y
           CONFIG_PACKAGE_ip6tables=y
           CONFIG_PACKAGE_ipv6helper=y
+          CONFIG_PACKAGE_kmod-gre=y
           CONFIG_PACKAGE_kmod-ipt-nat6=y
+          CONFIG_PACKAGE_kmod-iptunnel=y
           CONFIG_PACKAGE_kmod-leds-wndr3700-usb=y
           CONFIG_PACKAGE_kmod-nf-nat6=y
           CONFIG_PACKAGE_kmod-nft-bridge=y
           CONFIG_PACKAGE_kmod-nft-core=y
           CONFIG_PACKAGE_kmod-nft-netdev=y
           CONFIG_PACKAGE_kmod-sit=y
+          # CONFIG_PACKAGE_kmod-tun is not set
+          # CONFIG_PACKAGE_libminiupnpc is not set
+          # CONFIG_PACKAGE_libnatpmp is not set
           CONFIG_PACKAGE_libncurses=y
           CONFIG_PACKAGE_libnftnl=y
+          # CONFIG_PACKAGE_libstdcpp is not set
           CONFIG_PACKAGE_luci-app-nft-qos=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks is not set
           CONFIG_PACKAGE_luci-app-watchcat=y
           CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=y
+          CONFIG_PACKAGE_luci-app-pptp-server=y
+          CONFIG_PACKAGE_luci-app-unblockneteasemusic-mini=y
           CONFIG_PACKAGE_luci-proto-ipv6=y
           # CONFIG_PACKAGE_luci-proto-relay is not set
+          # CONFIG_PACKAGE_luci-app-zerotier is not set
           CONFIG_PACKAGE_nft-qos=y
           CONFIG_PACKAGE_nftables=y
           CONFIG_PACKAGE_odhcp6c=y
@@ -212,6 +221,7 @@ jobs:
           CONFIG_PACKAGE_openwrt-keyring=y
           # CONFIG_PACKAGE_relayd is not set
           # CONFIG_PACKAGE_srelay is not set
+          # CONFIG_PACKAGE_zerotier is not set
           CONFIG_PACKAGE_terminfo=y
           CONFIG_PACKAGE_usign=y
           CONFIG_PACKAGE_watchcat=y
