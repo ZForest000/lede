@@ -181,13 +181,15 @@ jobs:
           CONFIG_TARGET_ar71xx_generic=y
           CONFIG_TARGET_ar71xx_generic_DEVICE_wndr3800=y
           # CONFIG_KERNEL_MIPS_FPU_EMULATOR is not set
+          # CONFIG_OPENSSL_ENGINE_BUILTIN is not set
           CONFIG_PACKAGE_6in4=y
           CONFIG_PACKAGE_bind-host=y
           CONFIG_PACKAGE_bind-libs=y
           CONFIG_PACKAGE_coreutils-nohup=y
-          CONFIG_PACKAGE_dns2socks=y
+          CONFIG_PACKAGE_hd-idle=y
           CONFIG_PACKAGE_htop=y
           CONFIG_PACKAGE_ip6tables=y
+          CONFIG_PACKAGE_ipt2socks=y
           CONFIG_PACKAGE_ipv6helper=y
           CONFIG_PACKAGE_kmod-gre=y
           CONFIG_PACKAGE_kmod-ipt-nat6=y
@@ -198,21 +200,18 @@ jobs:
           CONFIG_PACKAGE_kmod-nft-core=y
           CONFIG_PACKAGE_kmod-nft-netdev=y
           CONFIG_PACKAGE_kmod-sit=y
-          # CONFIG_PACKAGE_kmod-tun is not set
-          # CONFIG_PACKAGE_libminiupnpc is not set
-          # CONFIG_PACKAGE_libnatpmp is not set
           CONFIG_PACKAGE_libncurses=y
           CONFIG_PACKAGE_libnftnl=y
-          # CONFIG_PACKAGE_libstdcpp is not set
-          CONFIG_PACKAGE_luci-app-nft-qos=y
+          CONFIG_PACKAGE_libopenssl-devcrypto=y
+          # CONFIG_PACKAGE_luci-app-accesscontrol is not set
+          CONFIG_PACKAGE_luci-app-hd-idle=y
           # CONFIG_PACKAGE_luci-app-nlbwmon is not set
+          # CONFIG_PACKAGE_luci-app-vlmcsd is not set
           CONFIG_PACKAGE_luci-app-watchcat=y
-          # CONFIG_PACKAGE_luci-app-zerotier is not set
-          CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=y
           CONFIG_PACKAGE_luci-proto-ipv6=y
           # CONFIG_PACKAGE_luci-proto-relay is not set
-          CONFIG_PACKAGE_nft-qos=y
           CONFIG_PACKAGE_nftables=y
           # CONFIG_PACKAGE_nlbwmon is not set
           CONFIG_PACKAGE_odhcp6c=y
@@ -224,8 +223,8 @@ jobs:
           # CONFIG_PACKAGE_relayd is not set
           CONFIG_PACKAGE_terminfo=y
           CONFIG_PACKAGE_usign=y
+          # CONFIG_PACKAGE_vlmcsd is not set
           CONFIG_PACKAGE_watchcat=y
-          # CONFIG_PACKAGE_zerotier is not set
           CONFIG_SIGNATURE_CHECK=y
           CONFIG_SIGNED_PACKAGES=y
           CONFIG_PACKAGE_kmod-nf-conntrack-netlink=y
