@@ -14,7 +14,7 @@ on:
   #  branches: 
   #    - master
   schedule:
-      - cron: 0 22 * * 7
+      - cron: 0 22 ? * Sat
   release:
       types: [published]
 
