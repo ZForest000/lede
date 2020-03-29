@@ -10,12 +10,12 @@
 name: openwrt-wndr3800
 
 on:
-  #push:
+  push:
   #  branches: 
   #    - master
-  # schedule:
-  #   - cron: 0 11 * * *
-   release:
+  schedule:
+     - cron: 0 0 * * 7
+  release:
      types: [published]
 
 jobs:
