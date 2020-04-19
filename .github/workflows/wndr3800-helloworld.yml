@@ -246,7 +246,7 @@ jobs:
 
       - name: Compile firmware
         run: |
-          make package/luci-app-ssr-plus/{clean,compile} V=s
+          make package/openwrt-packages/helloworld/luci-app-ssr-plus/{clean,compile} V=s
           echo "======================="
           echo "Space usage:"
           echo "======================="
