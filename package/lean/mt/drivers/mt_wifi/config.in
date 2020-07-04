@@ -22,6 +22,9 @@ if MTK_WIFI_DRIVER
 
 choice
 	prompt "Choose First WiFi Interface"
+	
+	config MTK_FIRST_IF_NONE
+	bool "None"
 
 	config MTK_FIRST_IF_MT7615E
 	bool "MT7615E"
@@ -41,20 +44,20 @@ choice
 	select MTK_MT_MAC
 	select MTK_CHIP_MT7626
 	
-	config MTK_FIRST_IF_NONE
-	bool "None"
+	
 endchoice
 
 choice
 	prompt "Choose Second WiFi Interface"
-	config MTK_SECOND_IF_NONE
-	bool "None"
 
 	config MTK_SECOND_IF_MT7615E
 	bool "MT7615E"
 	select MTK_WIFI_MT_MAC
 	select MTK_CHIP_MT7615E
 	select MTK_MULTI_INF_SUPPORT
+	
+	config MTK_SECOND_IF_NONE
+	bool "None"
 
 endchoice
 
@@ -270,12 +273,12 @@ config MTK_DBDC_MODE
 	depends on MTK_CHIP_MT7615E || MTK_CHIP_MT7626
 	select MULTI_PROFILE_SUPPORT
 	select DEFAULT_5G_PROFILE
-	default y
+	default n
 
 config MTK_MULTI_PROFILE_SUPPORT
         bool "Multi Profile Support"
         depends on MTK_DBDC_MODE
-        default y
+        default n
 
 config MTK_DEFAULT_5G_PROFILE
 	bool "5G default profile for DBDC"
@@ -503,12 +506,12 @@ choice
         prompt "PA LNA Type of 1st Card"
 		depends on ! MTK_FIRST_IF_NONE
 		
-		config MTK_FIRST_IF_EPAELNA
-		bool "ePAeLNA"
 		config MTK_FIRST_IF_IPAILNA
-		bool "iPAiLNA"		
+		bool "iPAiLNA"	
 		config MTK_FIRST_IF_IPAELNA
 		bool "iPAeLNA"
+		config MTK_FIRST_IF_EPAELNA
+		bool "ePAeLNA"	
 #		config MTK_FIRST_IF_EPAILNA
 #		bool "ePAiLNA"
 endchoice
@@ -516,12 +519,12 @@ choice
         prompt "PA LNA Type of 2nd Card"
 		depends on ! MTK_SECOND_IF_NONE
 		
-		config MTK_SECOND_IF_EPAELNA
-		bool "ePAeLNA"
 		config MTK_SECOND_IF_IPAILNA
 		bool "iPAiLNA"		
 		config MTK_SECOND_IF_IPAELNA
 		bool "iPAeLNA"
+		config MTK_SECOND_IF_EPAELNA
+		bool "ePAeLNA"
 #		config MTK_SECOND_IF_EPAILNA
 #		bool "ePAiLNA"
 endchoice
@@ -753,7 +756,7 @@ config MTK_RADIUS_ACCOUNTING_SUPPORT
 config MTK_GREENAP_SUPPORT
 	bool "GreenAP Support"
 	depends on MTK_MT_AP_SUPPORT
-	default y
+	default n
 	
 config MTK_PCIE_ASPM_DYM_CTRL_SUPPORT
 	bool "Pcie Aspm Dynamic Control Support"
@@ -798,7 +801,7 @@ config MTK_INTERWORKING
 
 config MTK_LINUX_NET_TXQ_SUPPORT
 	bool "NET TX Queue Support"
-	default n
+	default y
 
 #config WIFI_FWD_SUPPORT
 #        bool "WiFi Forwarding Support"
