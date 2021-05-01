@@ -133,7 +133,7 @@ jobs:
 
           # 常用LuCI插件选择:
           # cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-app-adbyby-plus=y
+          # CONFIG_PACKAGE_luci-app-adbyby-plus=y
           # CONFIG_PACKAGE_luci-app-aria2=y
           # CONFIG_PACKAGE_luci-app-baidupcs-web=y
           # CONFIG_PACKAGE_luci-app-docker=y
@@ -230,6 +230,7 @@ jobs:
           CONFIG_SIGNATURE_CHECK=y
           CONFIG_SIGNED_PACKAGES=y
           CONFIG_PACKAGE_kmod-nf-conntrack-netlink=y
+          CONFIG_PACKAGE_luci-app-adbyby-plus=y
           EOF
           # 
           # ========================固件定制部分结束========================
