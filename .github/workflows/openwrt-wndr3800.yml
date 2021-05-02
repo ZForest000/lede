@@ -230,7 +230,6 @@ jobs:
           CONFIG_SIGNATURE_CHECK=y
           CONFIG_SIGNED_PACKAGES=y
           CONFIG_PACKAGE_kmod-nf-conntrack-netlink=y
-          CONFIG_PACKAGE_luci-app-adbyby-plus=y
           EOF
           # 
           # ========================固件定制部分结束========================
